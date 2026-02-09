@@ -52,7 +52,7 @@ const App = () => {
       />
 
       {/* Cart */}
-      <Cart cartItems={cart} />
+      <Cart cart={cart} />
     </div>
   )
 }

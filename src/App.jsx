@@ -10,14 +10,14 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(false)
 
   // Cart state
-  const [cartItems, setCartItems] = useState([])
+  const [cart, setCart] = useState([])
 
   // Category filter state
   const [category, setCategory] = useState('all')
 
   // Add to cart handler
   function handleAddToCart(product) {
-    setCartItems(prevItems => [...prevItems, product])
+    setCart(prevItems => [...prevItems, product])
   }
 
   return (
@@ -52,7 +52,7 @@ const App = () => {
       />
 
       {/* Cart */}
-      <Cart cartItems={cartItems} />
+      <Cart cartItems={cart} />
     </div>
   )
 }

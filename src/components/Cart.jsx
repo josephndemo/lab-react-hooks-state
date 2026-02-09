@@ -1,14 +1,14 @@
 import React from 'react'
 
-const Cart = ({ cartItems }) => {
+const Cart = ({ cart }) => {
   return (
     <div>
       <h2>🧺 Cart</h2>
-      {cartItems.length === 0 ? (
+      {cart.length === 0 ? (
         <p>Your cart is empty</p>
       ) : (
         <ul>
-          {cartItems.map((item, index) => (
+          {cart.map((item, index) => (
             <li key={index}>{item.name}</li>
           ))}
         </ul>

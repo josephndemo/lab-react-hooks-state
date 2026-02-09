@@ -16,7 +16,7 @@ function App() {
   const [category, setCategory] = useState('all')
 
   function handleAddToCart(product) {
-    setCart(prevCart => [...prevCart, product])
+    setCart(prev => [...prev, product])
   }
 
   return (
@@ -38,6 +38,7 @@ function App() {
         <option value="Dairy">Dairy</option>
       </select>
 
+      {/* THIS LINE IS CRITICAL */}
       <ProductList
         products={products}
         category={category}

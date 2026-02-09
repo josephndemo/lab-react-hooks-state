@@ -1,12 +1,6 @@
 import ProductCard from './ProductCard'
 
-const products = [
-  { id: 1, name: 'Apple', category: 'Fruits' },
-  { id: 2, name: 'Milk', category: 'Dairy' },
-  { id: 3, name: 'Banana', category: 'Fruits' }
-]
-
-const ProductList = ({ category, onAddToCart }) => {
+const ProductList = ({ products = [], category, onAddToCart }) => {
   const filteredProducts =
     category === 'all'
       ? products

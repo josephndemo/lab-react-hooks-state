@@ -4,6 +4,12 @@ import DarkModeToggle from './components/DarkModeToggle'
 import Cart from './components/Cart'
 import './App.css'
 
+const products = [
+  { id: 1, name: 'Apple', category: 'Fruits' },
+  { id: 2, name: 'Milk', category: 'Dairy' },
+  { id: 3, name: 'Banana', category: 'Fruits' }
+]
+
 function App() {
   const [darkMode, setDarkMode] = useState(false)
   const [cart, setCart] = useState([])
@@ -33,6 +39,7 @@ function App() {
       </select>
 
       <ProductList
+        products={products}
         category={category}
         onAddToCart={handleAddToCart}
       />

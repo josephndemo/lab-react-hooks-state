@@ -1,4 +1,3 @@
-import React from 'react'
 import ProductCard from './ProductCard'
 
 const products = [
@@ -15,13 +14,17 @@ const ProductList = ({ category, onAddToCart }) => {
 
   return (
     <div>
-      {filteredProducts.map(product => (
-        <ProductCard
-          key={product.id}
-          product={product}
-          onAddToCart={onAddToCart}
-        />
-      ))}
+      {filteredProducts.length === 0 ? (
+        <p>No products available.</p>
+      ) : (
+        filteredProducts.map(product => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            onAddToCart={onAddToCart}
+          />
+        ))
+      )}
     </div>
   )
 }
